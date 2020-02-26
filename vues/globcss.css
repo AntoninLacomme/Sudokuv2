@@ -1,0 +1,40 @@
+body{
+	background-image: url("../img/fond2.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100%;
+	font-family: Arial, Cambria;
+}
+
+ul{
+	list-style-type: none;
+}
+
+table#tableSudoku{
+	position: absolute;
+	top: 0px;
+	left: 320px;
+}
+
+ul > li {
+	margin: 8px 0px 8px 0px;
+}
+
+ul > li > h2.title{
+	margin-left: 150px;
+	text-decoration: underline;
+}
+
+ul > li > input {
+	font-size: 20px;
+	text-align: left;
+	padding: 10px;
+	width: 250px;
+	padding-left: 30px;
+	transition: 0.4s;
+	margin-left: 250px;
+}
+
+ul > li > input:hover {
+	margin-left: 100px;
+}

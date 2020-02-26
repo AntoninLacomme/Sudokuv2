@@ -1,0 +1,72 @@
+{
+	"main" : [
+		{
+			"margin": "auto auto",
+			"width": "575px",
+			"background-color": "grey"
+		}
+	],
+	"span":[
+		{
+			"border": "solid 0px black",
+			"borderRadius": "50%",
+			"padding": "0px",
+			"paddingLeft": "9px",
+			"paddingRight": "9px"			
+		}
+	],
+	"spantrue":[
+		{
+			"border": "solid 3px yellowgreen"
+		}
+	],
+	"spanfalse":[
+		{
+			"border": "solid 3px red"
+		}
+	],
+	"cellule": [
+		{
+			"border": "solid thin black",
+			"padding": "10px",
+			"width": "35px",
+			"height": "35px",
+			"display": "inline-block",
+			"textAlign": "center",
+			"verticalAlign": "middle",
+			"margin": "2px",
+			"backgroundColor": "ivory",
+			"fontSize": "35px"
+		}
+	],
+	"celluleevdown": [
+		{
+			"backgroundColor": "rgb(190, 190, 190)"
+		}
+	],
+	"celluleevover": [
+		{
+			"backgroundColor": "#eee"
+		}
+	],
+	"cellulelineevover": [
+		{
+			"backgroundColor": "#eee"
+		}
+	],
+	"celluleevout": [
+		{
+			"backgroundColor": "ivory"
+		}
+	],
+	"cellulelineevout": [
+		{
+			"backgroundColor": "ivory"
+		}
+	],
+	"celluleselected": [
+		{
+			"backgroundColor": "#ccc"
+		}
+	]
+}

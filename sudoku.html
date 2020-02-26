@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<title>MiniGamz</title>
+	<link rel="stylesheet" type="text/css" href="cssMINIGAMZ.css">
+	<link rel="stylesheet" type="text/css" href="log/csssudoku.css">
+</head>
+
+
+<body>
+		<div id='title'><img src='img/logo.png'></div><div id='font'>
+		<h1>Sudoku</h1>
+			<input type=button onclick='javascript:genererJeu(20)' value='Bac à sable' class='diff'>
+			<input type=button onclick='javascript:genererJeu(30)' value='Facile' class='diff'>
+			<input type=button onclick='javascript:genererJeu(40)' value='Moyen' class='diff'>
+			<input type=button onclick='javascript:genererJeu(50)' value='Difficile' class='diff'>
+			<input type=button onclick='javascript:genererJeu(60)' value='Ultra' class='diff'>
+			<div id='game'></div>
+			<input type='button' onclick='javascript:resetTable()' value='Réinitialiser' id='reinit'>
+			<script type='text/javascript' src='log/Sudoku.js'></script>
+		</div>
+</body>
+</html>

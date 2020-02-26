@@ -1,0 +1,79 @@
+<!doctype html>
+
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<link rel='stylesheet' type='text/css' href='vues/globcss.css' />
+		<title>Index Sudoku</title>
+		<script type='text/javascript' src='keyboard/keyboard.js'></script>
+		<script type='text/javascript' src='game/plateau.js'></script>
+		<script type='text/javascript' src='game/sudoku.js'></script>
+
+
+		<script type='text/javascript'>
+		function createNewKeyboard (plateau) {
+			return new KeyBoard(plateau);
+		}
+		function createNewPlateau (nb) {
+			return new Window(nb);
+		}
+		function createNewGame (nb) {
+			document.getElementById("tableSudoku").children[0].children[0].remove();
+			monJeu = createNewPlateau (nb);
+			document.getElementById("tableSudoku").children[0].prepend(showPlateau(monJeu));
+			keyboard.SetWindow(monJeu);
+		}
+		function showPlateau (plateau){
+			var td1 = document.createElement("TD");
+			td1.append(plateau.GetGrille());
+			return td1;
+		}
+
+		function restartGame(){
+			monJeu.RefreshAll();
+		}
+
+		function showGame (plateau, keyboard, racine){
+			var table = document.createElement("TABLE");
+			table.id = "tableSudoku";
+			table.style.marginLeft = "auto";
+			table.style.marginRight = "auto";
+			var tr = document.createElement("TR");
+
+			tr.append(showPlateau(plateau));
+
+			var td2 = document.createElement("TD");
+			td2.append(keyboard);
+			tr.append(td2);
+			table.append(tr);
+
+			racine.body.append(table);
+		}
+		</script>
+
+	</head>
+
+	<body>
+		<ul>
+			<li><h2 class='title'>Difficulté</h2></li>
+			<li><input type='button' value='Bac à sable' onclick='javascript:createNewGame(20)' class='diff'></li>
+			<li><input type='button' value='Très Facile' onclick='javascript:createNewGame(27)' class='diff'></li>
+			<li><input type='button' value='Facile' onclick='javascript:createNewGame(34)' class='diff'></li>
+			<li><input type='button' value='Moyen' onclick='javascript:createNewGame(41)' class='diff'></li>
+			<li><input type='button' value='Difficile' onclick='javascript:createNewGame(48)' class='diff'></li>
+			<li><input type='button' value='Très Difficile' onclick='javascript:createNewGame(54)' class='diff'></li>
+			<li><input type='button' value='Expert' onclick='javascript:createNewGame(60)' class='diff'></li>
+			<li><h2 class='title'>Contrôle</h2></li>
+			<li><input type='button' value='Recommencer' onclick='javascript:restartGame()' class='diff'></li>
+		</ul>
+
+	</body>
+
+
+	<script type='text/javascript'>
+		var monJeu = createNewPlateau (41);
+		var keyboard = createNewKeyboard (monJeu);
+		showGame(monJeu, keyboard.GetMain(), document);
+	</script>
+
+</html>
